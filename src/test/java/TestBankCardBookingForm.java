@@ -26,7 +26,7 @@ public class TestBankCardBookingForm {
         $("[data-test-id='phone'] input").setValue("+79123456789");
         $("[data-test-id='agreement']").click();
         $("button.button").click();
-        $("notification__content")
+        $(".notification__content")
                 .shouldBe(Condition.visible, Duration.ofSeconds(15))
                 .shouldHave(Condition.exactText("Встреча успешно забронирована на " + planningDate));
     }
